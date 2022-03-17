@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Design</title>
+</head>
+
+<body>
+    <div class="btn-box">
+        <div>
+            <button class="btn btn-dark-border">Click Me</button>
+            <button class="btn btn-dark-border btn-green">Click Me</button>
+            <button class="btn btn-dark-border btn-purple">Click Me</button>
+        </div>
+        <div>
+            <button class="btn btn-dark-border btn-purple">Click Me</button>
+            <button class="btn btn-dark-border btn-green">Click Me</button>
+            <button class="btn btn-dark-border">Click Me</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    body {
+        background: #e4f7ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+    .btn-box {
+        display: flex;
+        flex-direction: column;
+    }
+    .btn-box div {
+        margin: 10px;
+    }
+    .btn-dark-border {
+        background: transparent;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        color: #4FACFE;
+        padding: 16px 30px;
+        position: relative;
+        text-transform: uppercase;
+        transition: none;
+        user-select: none;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        margin-right: 15px;
+    }
+    .btn-dark-border::after {
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        border-radius: 4px; 
+        padding: 2px; 
+        background: linear-gradient(101.79deg, #4FACFE 3.78%, #00F2FE 102.16%);
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out; 
+        mask-composite: exclude; 
+    }
+    .btn-dark-border:hover {
+        color: #fff;
+        box-shadow: none;
+        background: linear-gradient(101.79deg, #3990DC 3.78%, #1CDAE3 102.16%);
+        border-radius: 4px; 
+    }
+    .btn-dark-border:hover::after {
+        background: linear-gradient(101.79deg, #3990DC 3.78%, #1CDAE3 102.16%);
+    }
+    .btn-dark-border:focus {
+        box-shadow: none;
+        color: #113680;
+        background: #449DEC;
+    }
+    .btn-dark-border:focus::after {
+        background: #449DEC;
+    }
+
+    /* 2 */
+    .btn-green {
+        color: #20a020;
+    }
+    .btn-green:hover {
+        background: linear-gradient(101.79deg, #20a020 3.78%, #36c536 102.16%);
+        color: #fff;
+    }
+    .btn-green::after {
+        background: linear-gradient(101.79deg, #20a020 3.78%, #36c536 102.16%);
+    }
+    .btn-green:hover::after {
+        background: linear-gradient(101.79deg, #20a020 3.78%, #36c536 102.16%);
+    }
+
+    /* 3 */
+    .btn-purple {
+        color: #531bd8;
+    }
+    .btn-purple:hover {
+        background: linear-gradient(101.79deg, #531bd8 3.78%, #7441eb 102.16%);
+        color: #fff;
+    }
+    .btn-purple::after {
+        background: linear-gradient(101.79deg, #531bd8 3.78%, #7441eb 102.16%);
+    }
+    .btn-purple:hover::after {
+        background: linear-gradient(101.79deg, #531bd8 3.78%, #7441eb 102.16%);
+    }
+</style>
