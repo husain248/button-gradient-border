@@ -94,7 +94,8 @@
     .btn-green {
         color: #20a020;
     }
-    .btn-green:hover {
+    .btn-green:hover,
+    .btn-green:focus {
         background: linear-gradient(101.79deg, #20a020 3.78%, #36c536 102.16%);
         color: #fff;
     }
@@ -104,12 +105,16 @@
     .btn-green:hover::after {
         background: linear-gradient(101.79deg, #20a020 3.78%, #36c536 102.16%);
     }
+    .btn-green:focus::after {
+        background: #20a020;
+    }
 
     /* 3 */
     .btn-purple {
         color: #531bd8;
     }
-    .btn-purple:hover {
+    .btn-purple:hover,
+    .btn-purple:focus {
         background: linear-gradient(101.79deg, #531bd8 3.78%, #7441eb 102.16%);
         color: #fff;
     }
@@ -118,5 +123,8 @@
     }
     .btn-purple:hover::after {
         background: linear-gradient(101.79deg, #531bd8 3.78%, #7441eb 102.16%);
+    }
+    .btn-purple:focus::after {
+        background: #531bd8;
     }
 </style>
